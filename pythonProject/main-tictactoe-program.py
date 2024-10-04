@@ -69,4 +69,11 @@ def check_place_diagonal(grid):
     elif grid[2] == grid[4] == grid[6] and grid[2] != "-":
         winner = grid[2]
         return True
-    
+
+# Switch players X and O
+def switch_player():
+    global player
+    if player == "X":
+        player = "O"
+    else:
+        player = "X"
