@@ -77,3 +77,11 @@ def switch_player():
         player = "O"
     else:
         player = "X"
+
+# Check for ties
+def check_tie(grid):
+    global game_running
+    if "-" not in grid:
+        print_grid(grid)
+        print("Game Finished. Tie!")
+        game_running = False
