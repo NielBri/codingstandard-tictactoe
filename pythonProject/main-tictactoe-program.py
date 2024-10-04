@@ -47,4 +47,15 @@ def check_place_horizontal(grid):
         winner = grid[6]
         return True
 
-# Check whether there is a tie or winner in a horizontal line
+# Check whether there is a tie or winner in a vertical line
+def check_place_vertical(grid):
+    global winner
+    if grid[0] == grid[3] == grid[6] and grid[0] != "-":
+        winner = grid[0]
+        return True
+    elif grid[1] == grid[4] == grid[7] and grid[1] != "-":
+        winner = grid[1]
+        return True
+    elif grid[2] == grid[5] == grid[8] and grid[2] != "-":
+        winner = grid[2]
+        return True
