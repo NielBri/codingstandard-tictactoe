@@ -85,3 +85,19 @@ def check_tie(grid):
         print_grid(grid)
         print("Game Finished. Tie!")
         game_running = False
+
+# Check for wins
+def check_winner():
+    global game_running
+    if check_place_diagonal(grid) or check_place_vertical(grid) or check_place_horizontal(grid):
+        print(f"Winner is {winner}!!!!!!")
+
+# Game functions and end when winner or tie is achieve
+while game_running:
+    print_grid(grid)
+    if winner != None:
+        break
+    player_input(grid)
+    check_winner()
+    check_tie(grid)
+    switch_player()
